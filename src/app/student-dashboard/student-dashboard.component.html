@@ -1,0 +1,35 @@
+<router-outlet></router-outlet>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="text-center">
+                    <h3> !! Search Student Result !!</h3>
+                    <form [formGroup]="searchForm" (ngSubmit)="searchStudent()">
+                        <div class="md-3 mx-3 mt-3">
+                            <input  class="form-control form-control-lg" type="date" placeholder="Enter Date of Birth" formControlName="dateOfBirth"
+                                aria-label=".form-control-lg example">
+
+                        </div>
+                        
+                        <small *ngIf="searchForm.controls['dateOfBirth'].touched && searchForm.hasError('required','dateOfBirth') " class="text-danger">*Student Date Of Birth is Required</small>
+                        <div class="md-3 mx-3 mt-3">
+                            <input  class="form-control" type="number" placeholder="Enter roll number" formControlName="rollNumber" 
+                                aria-label="default input example">
+                        </div>
+                        <small *ngIf="searchForm.controls['rollNumber'].touched && searchForm.hasError('required','rollNumber') " class="text-danger">*Student RollNumber is Required</small>
+                        <div>
+                            <button [disabled]="searchForm.invalid" class="btn btn-info mt-3 mx-3"> Search</button>
+                            <!-- <button  class="btn btn-info mt-3 mx-3"> Clear</button> -->
+                        </div>
+
+
+                    </form>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>

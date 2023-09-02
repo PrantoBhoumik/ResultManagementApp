@@ -1,0 +1,51 @@
+<div class="container mt-6">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card mt-6">
+                <div class="text-center">
+                    <img src="https://thumbs.dreamstime.com/b/sign-up-member-icon-isolated-glossy-red-round-button-abstract-illustration-sign-up-member-icon-glossy-red-round-button-105955462.jpg" alt="logo"/>
+                    <h5> !! Register with your Details!!</h5>
+                    <div>
+                        <form [formGroup]="signupForm" (ngSubmit)="signUp()">
+                            <div class="mb-3">
+
+                                <label for="exampleInputEmail1" class="form-label">Full Name</label>
+                                <input type="text" formControlName="fullname" class="form-control" id="exampleInputEmail1"
+                                    aria-describedby="emailHelp">
+
+                            </div>
+                            <small *ngIf="signupForm.controls['fullname'].touched && signupForm.hasError('required','fullname') " class="text-danger">*Name is Required</small>
+                            <div class="mb-3">
+
+                                <label for="exampleInputEmail1" class="form-label">Email Address</label>
+                                <input type="email" formControlName="email"  class="form-control" id="exampleInputEmail1"
+                                    aria-describedby="emailHelp">
+
+                            </div> <small *ngIf="signupForm.controls['email'].touched && signupForm.hasError('required','email') " class="text-danger">*Email is Required</small>
+                            <div class="mb-3">
+
+                                <label for="exampleInputEmail1" class="form-label">Mobile Number</label>
+                                <input type="number" formControlName="mobile" class="form-control" id="exampleInputEmail1"
+                                    aria-describedby="emailHelp">
+
+                            </div>
+                            <small *ngIf="signupForm.controls['mobile'].touched && signupForm.hasError('required','mobile') " class="text-danger">*Moblie Number is Required</small>
+                            <div class="mb-3">
+                                <label for="exampleInputPassword1" class="form-label">Password</label>
+                                <input type="password" formControlName="password" class="form-control" id="exampleInputPassword1">
+                            </div>
+                            <small *ngIf="signupForm.controls['password'].touched && signupForm.hasError('required','password') " class="text-danger">*Password is Required</small>
+                            <br>
+                            <button [disabled]="signupForm.invalid"  type="submit" class="btn btn-primary mb-3">Signup</button>
+                        </form>
+                        <a routerLink="/login">Already Have Account? Click here to Login</a>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,16 @@
+.card{
+    border: none;
+    width: 700px;
+    padding: 50px;
+    position: absolute;
+    margin-top: 120px;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    background-color: rgb(217, 247, 247);
+    
+}
+img{
+    width:70px;
+  
+}

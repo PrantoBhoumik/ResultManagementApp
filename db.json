@@ -1,0 +1,65 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "studentDetails": [
+    {
+      "id": 1,
+      "name": "Pranto Bhoumik",
+      "rollNumber": 9,
+      "dateOfBirth": "2022-11-25",
+      "score": 79
+    },
+    {
+      "id": 3,
+      "name": "Subhojit Roy",
+      "rollNumber": 44,
+      "dateOfBirth": "2022-11-19",
+      "score": 87
+    },
+    {
+      "id": 4,
+      "name": "Rahul Dey",
+      "rollNumber": 23,
+      "dateOfBirth": "2022-11-07",
+      "score": 75
+    },
+    {
+      "id": 6,
+      "name": "Vikrant Khajuriya",
+      "rollNumber": 27,
+      "dateOfBirth": "2022-11-18",
+      "score": 76
+    }
+  ],
+  "signupUsers": [
+    {
+      "fullname": "Pranto Bhoumik",
+      "email": "pranto.bhoumik@nagarro.com",
+      "password": "Pranto@123",
+      "mobile": 9734707954,
+      "id": 1
+    },
+    {
+      "fullname": "Ayan Bhattacharya",
+      "email": "Ayan@gmail.com",
+      "password": "Ayan@123",
+      "mobile": 9746547447,
+      "id": 2
+    },
+    {
+      "fullname": "Subhojit Roy",
+      "email": "subhojit.roy@nagarro.com",
+      "password": "Subhojit@123",
+      "mobile": 9736567823,
+      "id": 3
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

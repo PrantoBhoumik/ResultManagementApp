@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="text-center">
+                    <img src="https://www.kindpng.com/picc/m/65-653117_login-button-image-png-log-in-clipart-transparent.png" alt="logo"/>
+                    <h5> !! Enter The Email and Password To Login!!</h5>
+                    <div> 
+                        <form [formGroup]="loginForm" (ngSubmit)="login()">
+                           
+                            <div class="mb-3">
+
+                                <label for="exampleInputEmail1" class="form-label">Email Address</label>
+                                <input type="email" formControlName="email" class="form-control" id="exampleInputEmail1"
+                                    aria-describedby="emailHelp">
+
+                            </div>
+                            <small *ngIf="loginForm.controls['email'].touched && loginForm.hasError('required','email')" class="text-danger">*User Email is Required</small>
+                          
+                            <div class="mb-3 mt-5">
+                                <label for="exampleInputPassword1" class="form-label">Password</label>
+                                <input type="password" formControlName="password" class="form-control" id="exampleInputPassword1">
+                            </div>
+                            <small *ngIf="loginForm.controls['password'].touched && loginForm.hasError('required','password') " class="text-danger">*User Password is Required</small>
+                            <br>
+                            <button [disabled]="loginForm.invalid" *ngIf="!auth.IsLoggedIn()" type="submit" class="btn btn-primary mb-3 mt-5">Login</button>
+                        </form>
+                        <a routerLink="/signup">New User? Click here to Sign Up</a>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>
