@@ -7,7 +7,7 @@ import{map}from 'rxjs/operators'
   providedIn: 'root'
 })
 export class ApiService {
- studentList:any[]=student;
+// studentList:any[]=student;
   constructor(private http: HttpClient) { }
   postStudent(data:any){
     return this.http.post<any>("http://localhost:3000/studentDetails",data)
