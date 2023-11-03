@@ -24,7 +24,7 @@ export class LoginComponent implements OnInit {
    // const user=res.find((a:any)=>{
    //    return a.email===this.loginForm.value.email && a.password===this.loginForm.value.password
   // });
-       if(this.loginForm.value.email==demo@gmail.com && this.loginForm.value.password==demo@123)
+       if(this.loginForm.value.email== 'demo@gmail.com' && this.loginForm.value.password=='demo@123')
      {  
        const user= 
        { 
