@@ -20,21 +20,22 @@ export class LoginComponent implements OnInit {
    }) 
   }
   login(){
-   // this.http.get<any>("http://localhost:3000/signupUsers").subscribe(res=>{
-   // const user=res.find((a:any)=>{
-   //    return a.email===this.loginForm.value.email && a.password===this.loginForm.value.password
-  // });
-       if(this.loginForm.value.email== 'demo@gmail.com' && this.loginForm.value.password=='demo@123')
+     // this.http.get<any>("http://localhost:3000/signupUsers").subscribe(res=>{
+     // const user=res.find((a:any)=>{
+     //    return a.email===this.loginForm.value.email && a.password===this.loginForm.value.password
+     // })
+     // });
+     if(this.loginForm.value.email == 'demo@gmail.com' && this.loginForm.value.password =='demo@123')
      {  
        const user= 
        { 
-         id:1,
-        email:demo@gmail.com ,
-        password:demo@123
-       }
-     }
+         id :1,
+         email:'demo@gmail.com',
+         password:'demo@123'
+        }
+      }
     
-     if(user){
+     if(user:any){
         alert("Login sucess");
 
         localStorage.setItem('token','fhsuighaeigii.khdfgaigai');
