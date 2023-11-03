@@ -16,11 +16,10 @@ export class ApiService {
     }))
   }
   getStudent(){
-    // return this.http.get<any>("http://localhost:3000/studentDetails")
-   // .pipe(map((res:any)=>{
-     //return res;
-    return studentList.pipe(map((res:any)=>{
+     return this.http.get<any>("http://localhost:3000/studentDetails")
+    .pipe(map((res:any)=>{
      return res;
+ 
     }))
   }
   updateStudent(data:any,id:number){
