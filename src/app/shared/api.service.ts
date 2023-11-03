@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import student from '.';
+import student from './student.json';
 import {HttpClient} from '@angular/common/http';
 import{map}from 'rxjs/operators'
 
@@ -19,7 +19,8 @@ export class ApiService {
     // return this.http.get<any>("http://localhost:3000/studentDetails")
    // .pipe(map((res:any)=>{
      //return res;
-    return 
+    return studentList.pipe(map((res:any)=>{
+     return res;
     }))
   }
   updateStudent(data:any,id:number){
